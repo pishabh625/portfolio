@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Patel | Technical Artist & Game Developer</title>
+    <meta name="description"
+        content="Technical Artist specializing in Tools Development, Unreal Engine, and Game Development. Creating immersive gaming experiences with cutting-edge technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-glitch" data-text="INITIALIZING">INITIALIZING</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <div class="loader-percent">0%</div>
+        </div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">RP</span>
+            <span class="logo-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="scan-line"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <div class="avatar-frame">
+                    <img src="avatar.png" alt="Rishabh Patel">
+                    <div class="avatar-glow"></div>
+                </div>
+            </div>
+            <div class="hero-text">
+                <div class="hero-subtitle">
+                    <span class="line"></span>
+                    <span class="text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="RISHABH PATEL">RISHABH PATEL</span>
+                </h1>
+                <div class="hero-roles">
+                    <span class="role-prefix">&gt;</span>
+                    <span class="typing-text"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description">
+                    An aspiring <span class="highlight">Technical Artist</span> with a passion for
+                    <span class="highlight">Tools Development</span> and <span class="highlight">Game Programming</span>
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-text">View Projects</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span class="btn-text">Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value" data-count="7">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="3">0</span>
+                        <span class="stat-label">Years Exp</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="2">0</span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">Player Profile</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-card glass-card">
+                    <div class="about-info">
+                        <div class="info-header">
+                            <div class="level-badge">
+                                <span class="level-icon"><i data-lucide="sword"></i></span>
+                                <span class="level-text">LVL 15</span>
+                            </div>
+                            <div class="class-badge">Technical Artist</div>
+                        </div>
+                        <p class="about-bio">
+                            A <span class="highlight">Game Developer</span> transitioning into <span
+                                class="highlight">Technical Art</span>,
+                            currently learning to bridge the gap between art and programming. Working at
+                            <span class="highlight">Visceral Technologies</span> in Mumbai, building game experiences
+                            with Verse.
+                        </p>
+                        <p class="about-bio">
+                            While my background is in <span class="highlight">Game Programming</span> and <span
+                                class="highlight">Tools Development</span>,
+                            I'm actively expanding my skills in shaders, VFX, and procedural content creation.
+                            I believe my programming foundation gives me a unique perspective for Technical Art.
+                        </p>
+                        <div class="about-attributes">
+                            <div class="attribute">
+                                <span class="attr-icon"><i data-lucide="graduation-cap"></i></span>
+                                <div class="attr-info">
+                                    <span class="attr-label">Education</span>
+                                    <span class="attr-value">B.Tech in CS & IT</span>
+                                    <span class="attr-sub">Acropolis Institute, Indore • GPA: 8.3/10</span>
+                                </div>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-icon"><i data-lucide="map-pin"></i></span>
+                                <div class="attr-info">
+                                    <span class="attr-label">Location</span>
+                                    <span class="attr-value">Mumbai, India</span>
+                                    <span class="attr-sub">Visceral Technologies PVT LTD</span>
+                                </div>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-icon"><i data-lucide="file-text"></i></span>
+                                <div class="attr-info">
+                                    <span class="attr-label">Publication</span>
+                                    <span class="attr-value">Raksha Sutra</span>
+                                    <span class="attr-sub">International Journal of Research Publication</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-xp">
+                    <h3 class="xp-title">Core Abilities</h3>
+                    <div class="xp-bars">
+                        <div class="xp-item">
+                            <div class="xp-header">
+                                <span class="xp-name">Unreal Engine</span>
+                                <span class="xp-level">Advanced</span>
+                            </div>
+                            <div class="xp-bar">
+                                <div class="xp-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="xp-item">
+                            <div class="xp-header">
+                                <span class="xp-name">Verse Programming</span>
+                                <span class="xp-level">Expert</span>
+                            </div>
+                            <div class="xp-bar">
+                                <div class="xp-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="xp-item">
+                            <div class="xp-header">
+                                <span class="xp-name">C/C++ Development</span>
+                                <span class="xp-level">Intermediate</span>
+                            </div>
+                            <div class="xp-bar">
+                                <div class="xp-fill" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="xp-item">
+                            <div class="xp-header">
+                                <span class="xp-name">Blueprints</span>
+                                <span class="xp-level">Advanced</span>
+                            </div>
+                            <div class="xp-bar">
+                                <div class="xp-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="xp-item">
+                            <div class="xp-header">
+                                <span class="xp-name">Blender</span>
+                                <span class="xp-level">Beginner</span>
+                            </div>
+                            <div class="xp-bar">
+                                <div class="xp-fill" data-width="30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/about&gt;</span>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">Quest Log</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="quest-badge current">
+                            <span class="quest-icon"><i data-lucide="zap"></i></span>
+                            <span class="quest-status">ACTIVE QUEST</span>
+                        </div>
+                        <h3 class="timeline-title">Junior Verse Programmer</h3>
+                        <h4 class="timeline-company">Visceral Technologies PVT LTD</h4>
+                        <div class="timeline-meta">
+                            <span class="meta-item">
+                                <span class="meta-icon"><i data-lucide="map-pin"></i></span> Mumbai, India
+                            </span>
+                            <span class="meta-item">
+                                <span class="meta-icon"><i data-lucide="calendar"></i></span> Jan 2025 - Present
+                            </span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="gamepad-2"></i></span>
+                                Developed game mechanics for <strong>Horror Doors</strong> using Verse
+                            </li>
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="hammer"></i></span>
+                                Currently building <strong>YouTube Tycoon [Gamer Edition]</strong>
+                            </li>
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="wrench"></i></span>
+                                Creating interactive systems and player progression mechanics
+                            </li>
+                        </ul>
+                        <div class="timeline-xp">
+                            <span class="xp-earned">+500 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="quest-badge completed">
+                            <span class="quest-icon"><i data-lucide="check-circle-2"></i></span>
+                            <span class="quest-status">COMPLETED</span>
+                        </div>
+                        <h3 class="timeline-title">UEFN Verse Programmer</h3>
+                        <h4 class="timeline-company">A Plus Associates LLP</h4>
+                        <div class="timeline-meta">
+                            <span class="meta-item">
+                                <span class="meta-icon"><i data-lucide="map-pin"></i></span> Tiruvannamalai, India
+                            </span>
+                            <span class="meta-item">
+                                <span class="meta-icon"><i data-lucide="calendar"></i></span> Feb 2024 - Dec 2024
+                            </span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="building-2"></i></span>
+                                Created <strong>Business City Tycoon</strong> - a dynamic business simulation
+                            </li>
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="coins"></i></span>
+                                Built in-game economy and resource management systems
+                            </li>
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="users"></i></span>
+                                Collaborated with team to implement features based on feedback
+                            </li>
+                        </ul>
+                        <div class="timeline-xp">
+                            <span class="xp-earned">+1200 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="quest-badge completed">
+                            <span class="quest-icon"><i data-lucide="check-circle-2"></i></span>
+                            <span class="quest-status">COMPLETED</span>
+                        </div>
+                        <h3 class="timeline-title">Unreal Engine Intern</h3>
+                        <h4 class="timeline-company">A Plus Associates LLP</h4>
+                        <div class="timeline-meta">
+                            <span class="meta-item">
+                                <span class="meta-icon"><i data-lucide="map-pin"></i></span> Tiruvannamalai, India
+                            </span>
+                            <span class="meta-item">
+                                <span class="meta-icon"><i data-lucide="calendar"></i></span> Mar 2023 - Aug 2023
+                            </span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="dice-5"></i></span>
+                                Developed <strong>Roll&Kill</strong> - 3D multiplayer board game
+                            </li>
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="target"></i></span>
+                                Built player interaction systems with Blueprints
+                            </li>
+                            <li>
+                                <span class="achievement-icon"><i data-lucide="pencil-ruler"></i></span>
+                                Designed seamless gameplay on 5x5 board system
+                            </li>
+                        </ul>
+                        <div class="timeline-xp">
+                            <span class="xp-earned">+800 XP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/experience&gt;</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Achievement Gallery</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="uefn">UEFN</button>
+                <button class="filter-btn" data-filter="unreal">Unreal Engine</button>
+            </div>
+            <div class="projects-grid">
+                <!-- YouTube Tycoon -->
+                <div class="project-card glass-card" data-category="uefn">
+                    <div class="project-image">
+                        <img src="https://img.youtube.com/vi/LmSY0nyKYaU/maxresdefault.jpg" alt="YouTube Tycoon">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/LmSY0nyKYaU" target="_blank" class="project-link"
+                                    title="Watch Video">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                                <a href="https://www.fortnite.com/@playpalrealms/5872-1683-6309" target="_blank"
+                                    class="project-link" title="Play on Fortnite">
+                                    <span><i data-lucide="gamepad-2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-badge current-badge">IN DEVELOPMENT</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">YouTube Tycoon [Gamer Edition]</h3>
+                        <p class="project-description">Build your gaming empire! Create content, grow your channel, and
+                            become the ultimate gaming YouTuber.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UEFN</span>
+                            <span class="tech-tag">Verse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horror Doors -->
+                <div class="project-card glass-card" data-category="uefn">
+                    <div class="project-image">
+                        <img src="https://img.youtube.com/vi/DD2WecP47dg/maxresdefault.jpg" alt="Horror Doors">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/DD2WecP47dg" target="_blank" class="project-link"
+                                    title="Watch Video">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Horror Doors</h3>
+                        <p class="project-description">A spine-chilling horror experience built with Verse. Navigate
+                            through mysterious doors while evading terrifying entities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UEFN</span>
+                            <span class="tech-tag">Verse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business City Tycoon -->
+                <div class="project-card glass-card" data-category="uefn">
+                    <div class="project-image">
+                        <img src="https://img.youtube.com/vi/HSUJSkYp_yU/hqdefault.jpg" alt="Business City Tycoon"
+                            onerror="this.src='https://img.youtube.com/vi/HSUJSkYp_yU/mqdefault.jpg'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/live/HSUJSkYp_yU" target="_blank" class="project-link"
+                                    title="Watch Video">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                                <a href="https://www.fortnite.com/@abc_games/2988-6445-6712?lang=en-US" target="_blank"
+                                    class="project-link" title="Play on Fortnite">
+                                    <span><i data-lucide="gamepad-2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Business City Tycoon</h3>
+                        <p class="project-description">Dynamic business simulation with property management, in-game
+                            economy, and resource management systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UEFN</span>
+                            <span class="tech-tag">Verse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roll & Kill -->
+                <div class="project-card glass-card" data-category="unreal">
+                    <div class="project-image">
+                        <img src="https://img.youtube.com/vi/gpSlpr4Niwk/maxresdefault.jpg" alt="Roll&Kill">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/gpSlpr4Niwk" target="_blank" class="project-link"
+                                    title="Watch Video">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1ZwQONadAW0QEN2tYzFp8M5cmNcqRLjdV/view?usp=sharing"
+                                    target="_blank" class="project-link" title="Watch Video">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-badge prototype-badge">PROTOTYPE</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Roll&Kill</h3>
+                        <p class="project-description">3D fighting board game inspired by AngBhangChokChang. Multiplayer
+                            1v1 challenge on a 5x5 board.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">Blueprints</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Racing Game -->
+                <div class="project-card glass-card" data-category="unreal">
+                    <div class="project-image">
+                        <img src="https://img.youtube.com/vi/i6QSdXQslwQ/maxresdefault.jpg" alt="Racing Game">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/i6QSdXQslwQ" target="_blank" class="project-link"
+                                    title="Watch Video">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Racing Game</h3>
+                        <p class="project-description">High-speed racing experience built in Unreal Engine with
+                            realistic vehicle physics and dynamic tracks.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">Blueprints</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Null Out -->
+                <div class="project-card glass-card" data-category="unreal">
+                    <div class="project-image">
+                        <img src="https://img.youtube.com/vi/wS1lsuQgSno/maxresdefault.jpg" alt="Null Out">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/wS1lsuQgSno" target="_blank" class="project-link"
+                                    title="Watch Video 1">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                                <a href="https://youtu.be/ffDXb5WtDow" target="_blank" class="project-link"
+                                    title="Watch Video 2">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-badge prototype-badge">PROTOTYPE</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Null Out</h3>
+                        <p class="project-description">Experimental project exploring unique gameplay mechanics and
+                            visual concepts in Unreal Engine.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">Blueprints</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cinematic Project -->
+                <div class="project-card glass-card" data-category="unreal">
+                    <div class="project-image">
+                        <img src="https://img.youtube.com/vi/dbvrbreKxKE/maxresdefault.jpg" alt="Cinematic Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://youtu.be/dbvrbreKxKE" target="_blank" class="project-link"
+                                    title="Watch Video">
+                                    <span><i data-lucide="play"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Cinematic Project</h3>
+                        <p class="project-description">Learning project focused on cinematography, camera work, and
+                            visual storytelling in Unreal Engine.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">Cinematics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/projects&gt;</span>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Skill Tree</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon"><i data-lucide="wrench"></i></span>
+                        Engines & Tools
+                    </h3>
+                    <div class="skill-nodes">
+                        <div class="skill-node active">
+                            <div class="node-icon">
+                                <img src="https://cdn2.unrealengine.com/ue-logo-stacked-unreal-engine-w-677x545-fac11de0943f.png"
+                                    alt="Unreal Engine">
+                            </div>
+                            <span class="node-name">Unreal Engine</span>
+                            <div class="node-level">Advanced</div>
+                        </div>
+                        <div class="skill-node active">
+                            <div class="node-icon">🎮</div>
+                            <span class="node-name">UEFN</span>
+                            <div class="node-level">Expert</div>
+                        </div>
+                        <div class="skill-node active">
+                            <div class="node-icon"><i data-lucide="palette"></i></div>
+                            <span class="node-name">Blender</span>
+                            <div class="node-level">Beginner</div>
+                        </div>
+                        <div class="skill-node active">
+                            <div class="node-icon"><i data-lucide="folder-git-2"></i></div>
+                            <span class="node-name">GitHub</span>
+                            <div class="node-level">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon"><i data-lucide="code-2"></i></span>
+                        Programming
+                    </h3>
+                    <div class="skill-nodes">
+                        <div class="skill-node active">
+                            <div class="node-icon"><i data-lucide="zap"></i></div>
+                            <span class="node-name">C/C++</span>
+                            <div class="node-level">Intermediate</div>
+                        </div>
+                        <div class="skill-node active">
+                            <div class="node-icon"><i data-lucide="scroll-text"></i></div>
+                            <span class="node-name">Verse</span>
+                            <div class="node-level">Expert</div>
+                        </div>
+                        <div class="skill-node active">
+                            <div class="node-icon"><i data-lucide="boxes"></i></div>
+                            <span class="node-name">Blueprints</span>
+                            <div class="node-level">Advanced</div>
+                        </div>
+                        <div class="skill-node">
+                            <div class="node-icon"><i data-lucide="target"></i></div>
+                            <span class="node-name">Dart</span>
+                            <div class="node-level">Intermediate</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon"><i data-lucide="rocket"></i></span>
+                        TA Learning Roadmap
+                    </h3>
+                    <div class="skill-nodes">
+                        <div class="skill-node active">
+                            <div class="node-icon"><i data-lucide="wrench"></i></div>
+                            <span class="node-name">Tools Dev</span>
+                            <div class="node-level">📚 Learning</div>
+                        </div>
+                        <div class="skill-node active">
+                            <div class="node-icon">🎲</div>
+                            <span class="node-name">Game Systems</span>
+                            <div class="node-level">✓ Experienced</div>
+                        </div>
+                        <div class="skill-node learning">
+                            <div class="node-icon">🎨</div>
+                            <span class="node-name">Shaders/HLSL</span>
+                            <div class="node-level">📚 Learning</div>
+                        </div>
+                        <div class="skill-node learning">
+                            <div class="node-icon"><i data-lucide="sparkles"></i></div>
+                            <span class="node-name">Niagara VFX</span>
+                            <div class="node-level">📚 Learning</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/skills&gt;</span>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Establish Connection</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info glass-card">
+                    <h3 class="contact-subtitle">Let's Build Something Amazing</h3>
+                    <p class="contact-text">
+                        Looking for a Technical Artist or Game Developer? I'm always excited to discuss new projects,
+                        creative ideas, or opportunities to collaborate.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:prishabh625@gmail.com" class="contact-link">
+                            <span class="link-icon"><i data-lucide="mail"></i></span>
+                            <div class="link-info">
+                                <span class="link-label">Email</span>
+                                <span class="link-value">prishabh625@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/rishi8827" target="_blank" class="contact-link">
+                            <span class="link-icon"><i data-lucide="briefcase"></i></span>
+                            <div class="link-info">
+                                <span class="link-label">LinkedIn</span>
+                                <span class="link-value">linkedin.com/in/rishi8827</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/pishabh625" target="_blank" class="contact-link">
+                            <span class="link-icon"><i data-lucide="github"></i></span>
+                            <div class="link-info">
+                                <span class="link-label">GitHub</span>
+                                <span class="link-value">github.com/pishabh625</span>
+                            </div>
+                        </a>
+                        <a href="https://www.artstation.com/gemxd" target="_blank" class="contact-link">
+                            <span class="link-icon"><i data-lucide="palette"></i></span>
+                            <div class="link-info">
+                                <span class="link-label">ArtStation</span>
+                                <span class="link-value">artstation.com/gemxd</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-terminal glass-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">connection_request.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">initiating_connection --target="Rishabh"</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">[INFO] Scanning for available channels...</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output success">[SUCCESS] Connection established!</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">send_message --type="collaboration"</span>
+                        </div>
+                        <div class="terminal-line blink">
+                            <span class="prompt">$</span>
+                            <span class="cursor-terminal">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/contact&gt;</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-glitch">
+                <span class="glitch" data-text="RISHABH PATEL">RISHABH PATEL</span>
+            </div>
+            <p class="footer-text">Technical Artist | Tools Developer | Game Developer</p>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/rishi8827" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/pishabh625" target="_blank" class="social-link">GitHub</a>
+                <a href="https://www.artstation.com/gemxd" target="_blank" class="social-link">ArtStation</a>
+            </div>
+            <p class="footer-copy">© 2025 Rishabh Patel. All systems operational.</p>
+        </div>
+        <div class="footer-grid"></div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
