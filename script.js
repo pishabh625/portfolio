@@ -24,23 +24,35 @@ function initLoader() {
     const loader = document.getElementById('loader');
     const progress = document.querySelector('.loader-progress');
     const percent = document.querySelector('.loader-percent');
+    if (!loader || !progress) return;
+
+    // Skip loader on repeat visits in same session and for reduced-motion users
+    if (sessionStorage.getItem('visited') === '1' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        loader.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        triggerHeroAnimations();
+        return;
+    }
 
     let width = 0;
+    const start = Date.now();
     const interval = setInterval(() => {
-        width += Math.random() * 15;
-        if (width >= 100) {
+        width += Math.random() * 18;
+        const elapsed = Date.now() - start;
+        // cap total loader time to ~900ms for recruiter scan speed
+        if (width >= 100 || elapsed > 900) {
             width = 100;
             clearInterval(interval);
+            sessionStorage.setItem('visited', '1');
             setTimeout(() => {
                 loader.classList.add('hidden');
                 document.body.style.overflow = 'auto';
-                // Trigger initial animations
                 triggerHeroAnimations();
-            }, 500);
+            }, 300);
         }
         progress.style.width = width + '%';
         percent.textContent = Math.floor(width) + '%';
-    }, 100);
+    }, 70);
 }
 
 function triggerHeroAnimations() {
@@ -174,8 +186,9 @@ function initParticles() {
         }
     }
 
-    // Create particles
-    const particleCount = Math.min(100, Math.floor(window.innerWidth * window.innerHeight / 15000));
+    // Create particles — reduced for performance, honors reduced-motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const particleCount = Math.min(60, Math.floor(window.innerWidth * window.innerHeight / 25000));
     for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
     }
@@ -199,20 +212,19 @@ function initParticles() {
         }
     }
 
+    let rafId;
+    let paused = false;
     function animate() {
+        if (paused || document.hidden) { rafId = requestAnimationFrame(animate); return; }
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        particles.forEach(particle => {
-            particle.update();
-            particle.draw();
-        });
-
+        particles.forEach(particle => { particle.update(); particle.draw(); });
         drawConnections();
-
-        requestAnimationFrame(animate);
+        rafId = requestAnimationFrame(animate);
     }
-
     animate();
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) paused = true; else { paused = false; if (!rafId) animate(); }
+    });
 }
 
 /* ========================================
@@ -270,6 +282,7 @@ function initTypingEffect() {
     const roles = [
         'Game Programmer',
         'Tools Programmer',
+        'Unreal C++ Learner',
         'Verse Programmer',
         'UEFN Developer'
     ];
