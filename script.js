@@ -1,5 +1,5 @@
 /* ========================================
-   RISHABH PATEL - TECHNICAL ARTIST PORTFOLIO
+   RISHABH PATEL - GAME & TOOLS PROGRAMMER PORTFOLIO
    JavaScript - Interactive Features
    ======================================== */
 
@@ -268,11 +268,10 @@ function initTypingEffect() {
     if (!typingElement) return;
 
     const roles = [
-        'Aspiring Technical Artist',
-        'Game Developer',
-        'Tools Enthusiast',
+        'Game Programmer',
+        'Tools Programmer',
         'Verse Programmer',
-        'Learning Every Day'
+        'UEFN Developer'
     ];
 
     let roleIndex = 0;
@@ -549,7 +548,7 @@ document.querySelectorAll('.skill-node').forEach(node => {
    ======================================== */
 console.log('%c⚡ Welcome to Rishabh Patel\'s Portfolio ⚡',
     'color: #00d4ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00d4ff;');
-console.log('%cTechnical Artist | Tools Developer | Game Developer',
+console.log('%cGame Programmer | Tools Programmer',
     'color: #a0a0b0; font-size: 14px;');
 console.log('%c🎮 Looking for the source code? Check out my GitHub!',
     'color: #00ff88; font-size: 12px;');

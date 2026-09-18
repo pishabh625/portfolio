@@ -1,5 +1,5 @@
 /* ========================================
-   RISHABH PATEL - TECHNICAL ARTIST PORTFOLIO
+   RISHABH PATEL - GAME & TOOLS PROGRAMMER PORTFOLIO
    Cyberpunk Theme with Gaming Aesthetics
    ======================================== */
 
@@ -1302,7 +1302,7 @@ img {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
 
@@ -1394,25 +1394,6 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
-
-/* Learning Nodes - Currently studying */
-.skill-node.learning {
-    opacity: 1;
-    border-color: rgba(255, 170, 0, 0.3);
-    background: linear-gradient(135deg, rgba(255, 170, 0, 0.05), rgba(255, 100, 0, 0.05));
-}
-
-.skill-node.learning:hover {
-    border-color: var(--warning);
-    box-shadow: 0 0 20px rgba(255, 170, 0, 0.3);
-}
-
-.skill-node.learning .node-level {
-    color: var(--warning);
-}
-
-
-
 
 /* ========================================
    CONTACT SECTION
